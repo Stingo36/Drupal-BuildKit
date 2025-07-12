@@ -132,6 +132,13 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
-        }
+        },
+"scripts": {
+  "post-create-project-cmd": [
+    "scripts/drupal-installer.php"
+  ]
+}
+
+
     }
 }
