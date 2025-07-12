@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function stingo_buildkit_install() {
+  // Set your default theme
+  \Drupal::configFactory()->getEditable('system.theme')
+    ->set('default', 'ui_suite_bootstrap')
+    ->save();
+}

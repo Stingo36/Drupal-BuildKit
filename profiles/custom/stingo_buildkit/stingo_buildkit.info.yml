@@ -1,0 +1,6 @@
+name: 'Stingo BuildKit'
+type: profile
+description: 'Pre-installed modules, theme, and config for Stingo.'
+core_version_requirement: ^9
+dependencies:
+  - admin_toolbar

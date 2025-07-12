@@ -1,0 +1,22 @@
+uuid: 231e40dd-d398-4750-a3d5-b96b4fb8c632
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ui_suite_bootstrap
+_core:
+  default_config_hash: 7YoXyBYnuzRCLj9_H3IrZo7Fi_YOxnJ4nQnpuzsG2Z4
+id: ui_suite_bootstrap_breadcrumbs
+theme: ui_suite_bootstrap
+region: header
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

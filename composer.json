@@ -1,0 +1,137 @@
+{
+    "name": "drupal/legacy-project",
+    "description": "Project template for Drupal projects with composer following drupal/drupal layout",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+  "type": "package",
+  "package": {
+    "name": "asset/bootstrap",
+    "version": "5.3.3",
+    "type": "drupal-library",
+    "extra": {
+      "installer-name": "bootstrap"
+    },
+    "dist": {
+      "type": "zip",
+      "url": "https://api.github.com/repos/twbs/bootstrap/zipball/6e1f75f420f68e1d52733b8e407fc7c3766c9dba",
+      "reference": "6e1f75f420f68e1d52733b8e407fc7c3766c9dba"
+    }
+  }
+},
+{
+  "type": "package",
+  "package": {
+    "name": "asset/bootstrap-icons",
+    "version": "1.11.3",
+    "type": "drupal-library",
+    "extra": {
+      "installer-name": "bootstrap-icons"
+    },
+    "dist": {
+      "type": "zip",
+      "url": "https://api.github.com/repos/twbs/icons/zipball/8d88686c03c3768a2d82ba4f20c3c4e1b100fa29",
+      "reference": "8d88686c03c3768a2d82ba4f20c3c4e1b100fa29"
+    }
+  }
+}
+    ],
+    "require": {
+        "asset/bootstrap": "5.3.3",
+        "asset/bootstrap-icons": "1.11.3",
+        "composer/installers": "^2.0",
+        "drupal/admin_toolbar": "^3.6",
+        "drupal/core-composer-scaffold": "^10.5",
+        "drupal/core-project-message": "^10.5",
+        "drupal/core-recommended": "^10.5",
+        "drupal/core-vendor-hardening": "^10.5",
+        "drupal/pathauto": "^1.13",
+        "drupal/ui_suite_bootstrap": "^5.1@alpha",
+        "drush/drush": "^13.6"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "drupal/core-vendor-hardening": true,
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "php-http/discovery": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+          "enable-patching": true,
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "./"
+            }
+        },
+        "installer-paths": {
+            "core": [
+                "type:drupal-core"
+            ],
+            "libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
+        "drupal-core-project-message": {
+            "include-keys": [
+                "homepage",
+                "support"
+            ],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  from the drupal/legacy-project template!               </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Install the site: https://www.drupal.org/docs/installing-drupal",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://www.drupal.org/support",
+                "  * Get involved with the Drupal community:",
+                "      https://www.drupal.org/getting-involved",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
+            ]
+        }
+    }
+}

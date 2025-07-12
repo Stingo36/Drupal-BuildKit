@@ -1,0 +1,59 @@
+uuid: 46a9a1c7-89de-446e-81fa-8c4fc691b094
+langcode: en
+status: true
+dependencies:
+  module:
+    - ui_patterns
+    - ui_patterns_blocks
+  theme:
+    - ui_suite_bootstrap
+id: ui_suite_bootstrap_alert
+theme: ui_suite_bootstrap
+region: header
+weight: -7
+provider: null
+plugin: 'ui_patterns:ui_suite_bootstrap:alert'
+settings:
+  id: 'ui_patterns:ui_suite_bootstrap:alert'
+  label: Alert
+  label_display: visible
+  provider: ui_patterns_blocks
+  ui_patterns:
+    component_id: 'ui_suite_bootstrap:alert'
+    variant_id:
+      source_id: select
+      source:
+        value: dark
+    props:
+      attributes:
+        source_id: attributes
+        source:
+          value: ''
+      dismissible:
+        source_id: checkbox
+        source:
+          value: false
+      heading_level:
+        source_id: select
+        source:
+          value: ''
+      heading_attributes:
+        source_id: attributes
+        source:
+          value: ''
+    slots:
+      heading:
+        sources:
+          -
+            source_id: token
+            source:
+              value: HEHEHEH
+            _weight: '0'
+      message:
+        sources:
+          -
+            source_id: token
+            source:
+              value: 'FINALLLYYY THE ROCK IS BACK '
+            _weight: '0'
+visibility: {  }

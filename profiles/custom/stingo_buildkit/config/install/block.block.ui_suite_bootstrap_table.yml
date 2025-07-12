@@ -1,0 +1,105 @@
+uuid: 3d8c1ffa-2b8c-4e10-b719-7dab9b5c8eb4
+langcode: en
+status: true
+dependencies:
+  module:
+    - ui_patterns
+    - ui_patterns_blocks
+  theme:
+    - ui_suite_bootstrap
+id: ui_suite_bootstrap_table
+theme: ui_suite_bootstrap
+region: content
+weight: 0
+provider: null
+plugin: 'ui_patterns:ui_suite_bootstrap:table'
+settings:
+  id: 'ui_patterns:ui_suite_bootstrap:table'
+  label: Table
+  label_display: visible
+  provider: ui_patterns_blocks
+  ui_patterns:
+    component_id: 'ui_suite_bootstrap:table'
+    variant_id:
+      source_id: select
+      source:
+        value: ''
+    props:
+      attributes:
+        source_id: attributes
+        source:
+          value: ''
+      header_color:
+        source_id: select
+        source:
+          value: ''
+      footer_color:
+        source_id: select
+        source:
+          value: ''
+      stripes:
+        source_id: selects
+        source:
+          value:
+            - ''
+      borders:
+        source_id: select
+        source:
+          value: ''
+      hover:
+        source_id: checkbox
+        source:
+          value: false
+      divider:
+        source_id: selects
+        source:
+          value:
+            - ''
+      responsive:
+        source_id: select
+        source:
+          value: ''
+      caption_top:
+        source_id: checkbox
+        source:
+          value: false
+      header_columns:
+        source_id: number
+        source:
+          value: ''
+    slots:
+      colgroups:
+        sources:
+          -
+            source_id: token
+            source:
+              value: T1
+            _weight: '0'
+      header:
+        sources:
+          -
+            source_id: token
+            source:
+              value: ''
+            _weight: '0'
+          -
+            source_id: token
+            source:
+              value: heyy
+            _weight: '1'
+      rows:
+        sources:
+          -
+            source_id: token
+            source:
+              value: '3'
+            _weight: '0'
+          -
+            source_id: token
+            source:
+              value: '5'
+            _weight: '1'
+      footer: {  }
+      empty: {  }
+      caption: {  }
+visibility: {  }

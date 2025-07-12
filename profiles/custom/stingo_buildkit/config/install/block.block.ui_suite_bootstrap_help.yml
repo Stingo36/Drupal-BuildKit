@@ -1,0 +1,22 @@
+uuid: 0603d485-f5c4-4922-8114-fd745683fb86
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - ui_suite_bootstrap
+_core:
+  default_config_hash: ydOOEE5pEU9zqP0LxCrg60MldEUHnXSoYM5wMNYwUis
+id: ui_suite_bootstrap_help
+theme: ui_suite_bootstrap
+region: help
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }
