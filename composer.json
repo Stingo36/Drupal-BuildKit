@@ -135,7 +135,7 @@
         },
 "scripts": {
   "post-create-project-cmd": [
-    "scripts/drupal-installer.php"
+    "php scripts/drupal-installer.php"
   ]
 }
 
